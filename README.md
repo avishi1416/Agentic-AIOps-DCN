@@ -1,3 +1,12 @@
+---
+title: Agentic AIOps DCN
+emoji: 🚀
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+---
+
 # Adaptive Loss-Based Autonomous Remediation in Simulated AIOps Systems
 
 ## Research Prototype
