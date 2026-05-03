@@ -1,4 +1,4 @@
-const API_BASE = 'http://localhost:7860/api';
+const API_BASE = '/api';
 
 // Elements
 const runBtn = document.getElementById('run-btn');
