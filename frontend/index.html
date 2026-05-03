@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuraFlux - AIOps Remediation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>NeuraFlux <span>AIOps Engine</span></h1>
+            </div>
+            <div class="header-actions">
+                <div class="status-indicator" id="system-status">
+                    <span class="dot red"></span> Not Initialized
+                </div>
+                <button id="run-btn" class="primary-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                    Run Simulation
+                </button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <section class="card summary-panel glass-panel">
+                <h2>System Overview</h2>
+                <div class="stats-grid" id="summary-stats">
+                    <div class="stat-box">
+                        <span class="label">Services</span>
+                        <span class="value" id="stat-services">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Anomalies Detected</span>
+                        <span class="value" id="stat-anomalies">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Total Remediations</span>
+                        <span class="value" id="stat-remediations">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="label">Avg Cumulative Loss</span>
+                        <span class="value" id="stat-loss">0.00</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card services-panel glass-panel">
+                <h2>Service States & Metrics</h2>
+                <div class="services-list" id="services-container">
+                    <div class="empty-state">Run the simulation to view service metrics.</div>
+                </div>
+            </section>
+
+            <section class="card anomalies-panel glass-panel">
+                <h2>Recent Incidents</h2>
+                <div class="anomalies-list" id="incidents-container">
+                    <div class="empty-state">No incidents recorded.</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Remediation Modal -->
+    <div class="modal-overlay" id="remediation-modal">
+        <div class="modal glass-panel">
+            <h3>Execute Remediation</h3>
+            <p>Select an action for <strong id="modal-service-id"></strong></p>
+            
+            <div class="action-options">
+                <label class="radio-label">
+                    <input type="radio" name="action" value="" checked>
+                    <span>Auto-select Best Action</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="action" value="Restart Service">
+                    <span>Restart Service</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="action" value="Scale Replicas">
+                    <span>Scale Replicas</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="action" value="Rollback Deployment">
+                    <span>Rollback Deployment</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="action" value="Clear Cache">
+                    <span>Clear Cache</span>
+                </label>
+            </div>
+
+            <div class="modal-actions">
+                <button class="secondary-btn" id="cancel-remediation">Cancel</button>
+                <button class="primary-btn" id="confirm-remediation">Execute</button>
+            </div>
+            
+            <div id="remediation-result" class="remediation-result hidden"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

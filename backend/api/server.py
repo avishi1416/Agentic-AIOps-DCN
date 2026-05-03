@@ -136,6 +136,12 @@ def create_app() -> FastAPI:
             raise HTTPException(status_code=400, detail="Pipeline not initialized.")
         return pipeline.get_full_state()
 
+    # Serve the vanilla HTML/JS UI
+    from fastapi.staticfiles import StaticFiles
+    import os
+    if os.path.isdir("frontend"):
+        app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
+
     return app
 
 
