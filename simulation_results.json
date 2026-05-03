@@ -1,0 +1,690 @@
+{
+  "pipeline_results": {
+    "num_services": 5,
+    "total_anomalies_detected": 2483,
+    "total_remediations": 50,
+    "avg_cumulative_loss": 0.1817464532911231,
+    "max_cumulative_loss": 0.20652319721035042,
+    "evaluation_metrics": {
+      "LRR": 0.476,
+      "RSR": 0.72,
+      "FRR": 0.0,
+      "SIS": 0.116,
+      "MTTR": 33.33,
+      "total_remediations": 50,
+      "successful_remediations": 36
+    },
+    "memory_summary": {
+      "total_records": 50,
+      "unique_services": 5,
+      "remediations_stored": 50,
+      "successful_remediations": 36
+    },
+    "optimizer_params": {
+      "alpha": 0.3019488637847043,
+      "beta": 0.26242541176180534,
+      "gamma": 0.2456743032246668,
+      "delta": 0.18995142122882352
+    },
+    "num_incidents_injected": 8
+  },
+  "service_states": {
+    "service_0": {
+      "avg_severity": 0.2577159854574746,
+      "max_severity": 0.5400458093039953,
+      "avg_failure_prob": 0.12727050256845346,
+      "avg_stability": 0.6699041583259308,
+      "cumulative_loss": 0.17515158961416963,
+      "downtime_fraction": 0.0,
+      "num_anomalies": 421,
+      "num_remediations": 10,
+      "remediations": [
+        {
+          "timestamp": 345.0,
+          "action": "rollback_deployment",
+          "confidence": 0.29557051978719906,
+          "success": true,
+          "loss_before": 0.2404835937670584,
+          "loss_after": 0.07214507813011752,
+          "recovery_time": 120.0
+        },
+        {
+          "timestamp": 355.0,
+          "action": "rollback_deployment",
+          "confidence": 0.5031835731411303,
+          "success": false,
+          "loss_before": 0.25267876820480223,
+          "loss_after": 0.2779466450252825,
+          "recovery_time": 120.0
+        },
+        {
+          "timestamp": 385.0,
+          "action": "restart_service",
+          "confidence": 0.28898733320440995,
+          "success": true,
+          "loss_before": 0.26947148242415864,
+          "loss_after": 0.0808414447272476,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 755.0,
+          "action": "restart_service",
+          "confidence": 0.5619318708749796,
+          "success": true,
+          "loss_before": 0.2739079535962761,
+          "loss_after": 0.08217238607888283,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1570.0,
+          "action": "restart_service",
+          "confidence": 0.7965904390318999,
+          "success": false,
+          "loss_before": 0.16889360890306077,
+          "loss_after": 0.18578296979336686,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1580.0,
+          "action": "scale_replicas",
+          "confidence": 0.22851264871227073,
+          "success": true,
+          "loss_before": 0.15396845046039553,
+          "loss_after": 0.04619053513811866,
+          "recovery_time": 60.0
+        },
+        {
+          "timestamp": 2285.0,
+          "action": "scale_replicas",
+          "confidence": 0.5928500246144904,
+          "success": false,
+          "loss_before": 0.22839164002434242,
+          "loss_after": 0.25123080402677667,
+          "recovery_time": 60.0
+        },
+        {
+          "timestamp": 2460.0,
+          "action": "restart_service",
+          "confidence": 0.20696976874216066,
+          "success": true,
+          "loss_before": 0.07287902042174783,
+          "loss_after": 0.02186370612652435,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2705.0,
+          "action": "restart_service",
+          "confidence": 0.297542274963417,
+          "success": true,
+          "loss_before": 0.2408786423646624,
+          "loss_after": 0.07226359270939871,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 3055.0,
+          "action": "restart_service",
+          "confidence": 0.3538216433120256,
+          "success": true,
+          "loss_before": 0.2492783459916033,
+          "loss_after": 0.07478350379748099,
+          "recovery_time": 30.0
+        }
+      ],
+      "severity_weights": {
+        "cpu": 0.23982142857142857,
+        "latency": 0.3547619047619047,
+        "memory": 0.2413690476190476,
+        "error": 0.16404761904761905
+      },
+      "loss_weights": {
+        "alpha": 0.2989690716161725,
+        "beta": 0.2577319576207555,
+        "gamma": 0.24742268249823576,
+        "delta": 0.19587628826483627
+      }
+    },
+    "service_1": {
+      "avg_severity": 0.2549296945666113,
+      "max_severity": 0.6232385718587229,
+      "avg_failure_prob": 0.11689087722043842,
+      "avg_stability": 0.6894146204244932,
+      "cumulative_loss": 0.1659738598540025,
+      "downtime_fraction": 0.0,
+      "num_anomalies": 552,
+      "num_remediations": 10,
+      "remediations": [
+        {
+          "timestamp": 330.0,
+          "action": "restart_service",
+          "confidence": 0.3984740671905437,
+          "success": false,
+          "loss_before": 0.23193417032244484,
+          "loss_after": 0.2551275873546893,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 335.0,
+          "action": "restart_service",
+          "confidence": 0.3868666417901746,
+          "success": true,
+          "loss_before": 0.11343276745469572,
+          "loss_after": 0.034029830236408716,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 350.0,
+          "action": "restart_service",
+          "confidence": 0.30330938151739495,
+          "success": true,
+          "loss_before": 0.2367492309585155,
+          "loss_after": 0.07102476928755465,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 685.0,
+          "action": "restart_service",
+          "confidence": 0.46510376884120974,
+          "success": true,
+          "loss_before": 0.10096585911668421,
+          "loss_after": 0.030289757735005262,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1625.0,
+          "action": "restart_service",
+          "confidence": 0.44830347065254905,
+          "success": false,
+          "loss_before": 0.07800012097063097,
+          "loss_after": 0.08580013306769407,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1640.0,
+          "action": "restart_service",
+          "confidence": 0.27600921182811555,
+          "success": true,
+          "loss_before": 0.2404677961078185,
+          "loss_after": 0.07214033883234554,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2225.0,
+          "action": "restart_service",
+          "confidence": 0.41591108291803747,
+          "success": false,
+          "loss_before": 0.09021151260592666,
+          "loss_after": 0.09923266386651934,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2360.0,
+          "action": "restart_service",
+          "confidence": 0.2306041114053342,
+          "success": true,
+          "loss_before": 0.20832316465290907,
+          "loss_after": 0.06249694939587272,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2580.0,
+          "action": "restart_service",
+          "confidence": 0.2570245554932653,
+          "success": true,
+          "loss_before": 0.21498028593370946,
+          "loss_after": 0.06449408578011284,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 3050.0,
+          "action": "restart_service",
+          "confidence": 0.28408067069508103,
+          "success": true,
+          "loss_before": 0.25016526925693894,
+          "loss_after": 0.07504958077708168,
+          "recovery_time": 30.0
+        }
+      ],
+      "severity_weights": {
+        "cpu": 0.23091158963585434,
+        "latency": 0.36349439775910364,
+        "memory": 0.23301207983193276,
+        "error": 0.17258193277310926
+      },
+      "loss_weights": {
+        "alpha": 0.3006694028075526,
+        "beta": 0.2567929933793011,
+        "gamma": 0.24785869729779875,
+        "delta": 0.19467890651534753
+      }
+    },
+    "service_2": {
+      "avg_severity": 0.2677108845651287,
+      "max_severity": 0.6984826937645044,
+      "avg_failure_prob": 0.1452302729328927,
+      "avg_stability": 0.6544048808756896,
+      "cumulative_loss": 0.18376913793279145,
+      "downtime_fraction": 0.0,
+      "num_anomalies": 415,
+      "num_remediations": 10,
+      "remediations": [
+        {
+          "timestamp": 355.0,
+          "action": "restart_service",
+          "confidence": 0.2949216329859302,
+          "success": true,
+          "loss_before": 0.2742804164011954,
+          "loss_after": 0.08228412492035861,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 365.0,
+          "action": "restart_service",
+          "confidence": 0.30956363508116247,
+          "success": true,
+          "loss_before": 0.2599208911973573,
+          "loss_after": 0.07797626735920718,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 390.0,
+          "action": "restart_service",
+          "confidence": 0.48732160680821934,
+          "success": true,
+          "loss_before": 0.10464666992153653,
+          "loss_after": 0.03139400097646096,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 755.0,
+          "action": "restart_service",
+          "confidence": 0.337163740969731,
+          "success": true,
+          "loss_before": 0.31397179108984574,
+          "loss_after": 0.09419153732695372,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1490.0,
+          "action": "restart_service",
+          "confidence": 0.39169891360296716,
+          "success": true,
+          "loss_before": 0.0876244677879569,
+          "loss_after": 0.02628734033638707,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1500.0,
+          "action": "restart_service",
+          "confidence": 0.4384349173205213,
+          "success": true,
+          "loss_before": 0.09061433398370251,
+          "loss_after": 0.027184300195110752,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2265.0,
+          "action": "restart_service",
+          "confidence": 0.370444494092081,
+          "success": true,
+          "loss_before": 0.26651769184858254,
+          "loss_after": 0.07995530755457476,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2435.0,
+          "action": "restart_service",
+          "confidence": 0.37851763703323593,
+          "success": true,
+          "loss_before": 0.2544187774431589,
+          "loss_after": 0.07632563323294766,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2675.0,
+          "action": "restart_service",
+          "confidence": 0.3898147756543793,
+          "success": false,
+          "loss_before": 0.25879947250208724,
+          "loss_after": 0.284679419752296,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 3015.0,
+          "action": "restart_service",
+          "confidence": 0.3507830975225089,
+          "success": true,
+          "loss_before": 0.23302349608985395,
+          "loss_after": 0.06990704882695618,
+          "recovery_time": 30.0
+        }
+      ],
+      "severity_weights": {
+        "cpu": 0.22299454643942448,
+        "latency": 0.367275397428344,
+        "memory": 0.225420516430742,
+        "error": 0.18430953970148947
+      },
+      "loss_weights": {
+        "alpha": 0.29995488222137073,
+        "beta": 0.26237953273921266,
+        "gamma": 0.24570534264963056,
+        "delta": 0.19196024238978607
+      }
+    },
+    "service_3": {
+      "avg_severity": 0.2742679054042473,
+      "max_severity": 0.5972220313010197,
+      "avg_failure_prob": 0.12631114503412313,
+      "avg_stability": 0.685234638006196,
+      "cumulative_loss": 0.20652319721035042,
+      "downtime_fraction": 0.125,
+      "num_anomalies": 659,
+      "num_remediations": 10,
+      "remediations": [
+        {
+          "timestamp": 500.0,
+          "action": "restart_service",
+          "confidence": 0.35986376065689707,
+          "success": true,
+          "loss_before": 0.2352099337760759,
+          "loss_after": 0.07056298013282276,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 520.0,
+          "action": "restart_service",
+          "confidence": 0.3704311759793245,
+          "success": true,
+          "loss_before": 0.26801572169584553,
+          "loss_after": 0.08040471650875365,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 560.0,
+          "action": "restart_service",
+          "confidence": 0.37807884038752493,
+          "success": true,
+          "loss_before": 0.2701025034498713,
+          "loss_after": 0.08103075103496139,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 965.0,
+          "action": "restart_service",
+          "confidence": 0.5541639600180615,
+          "success": true,
+          "loss_before": 0.10622848653114887,
+          "loss_after": 0.03186854595934466,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1720.0,
+          "action": "restart_service",
+          "confidence": 0.39311230282509,
+          "success": false,
+          "loss_before": 0.23401929957315984,
+          "loss_after": 0.25742122953047586,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1735.0,
+          "action": "restart_service",
+          "confidence": 0.5113377303009918,
+          "success": false,
+          "loss_before": 0.09939826622706019,
+          "loss_after": 0.10933809284976621,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2435.0,
+          "action": "restart_service",
+          "confidence": 0.47147419550416836,
+          "success": true,
+          "loss_before": 0.10133972215548714,
+          "loss_after": 0.03040191664664614,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2595.0,
+          "action": "restart_service",
+          "confidence": 0.48668301790770874,
+          "success": true,
+          "loss_before": 0.11097405229416568,
+          "loss_after": 0.0332922156882497,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2820.0,
+          "action": "restart_service",
+          "confidence": 0.34208211635323416,
+          "success": false,
+          "loss_before": 0.23022125751460792,
+          "loss_after": 0.2532433832660687,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 3115.0,
+          "action": "restart_service",
+          "confidence": 0.37286858496621056,
+          "success": true,
+          "loss_before": 0.3951054044106262,
+          "loss_after": 0.11853162132318786,
+          "recovery_time": 30.0
+        }
+      ],
+      "severity_weights": {
+        "cpu": 0.21542538177729983,
+        "latency": 0.37173771451344856,
+        "memory": 0.21804974636368063,
+        "error": 0.19478715734557103
+      },
+      "loss_weights": {
+        "alpha": 0.30228766833163717,
+        "beta": 0.25882826216448496,
+        "gamma": 0.24697650139170566,
+        "delta": 0.19190756811217236
+      }
+    },
+    "service_4": {
+      "avg_severity": 0.26365312908422606,
+      "max_severity": 0.5964811309274918,
+      "avg_failure_prob": 0.13635309776478705,
+      "avg_stability": 0.6668219925133492,
+      "cumulative_loss": 0.17731448184430146,
+      "downtime_fraction": 0.0,
+      "num_anomalies": 436,
+      "num_remediations": 10,
+      "remediations": [
+        {
+          "timestamp": 365.0,
+          "action": "restart_service",
+          "confidence": 0.33297838270627267,
+          "success": true,
+          "loss_before": 0.2765533214649785,
+          "loss_after": 0.08296599643949355,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 375.0,
+          "action": "restart_service",
+          "confidence": 0.3377206119978764,
+          "success": true,
+          "loss_before": 0.2858798523620429,
+          "loss_after": 0.08576395570861287,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 405.0,
+          "action": "restart_service",
+          "confidence": 0.335540535397684,
+          "success": false,
+          "loss_before": 0.26407120768416337,
+          "loss_after": 0.2904783284525797,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 765.0,
+          "action": "restart_service",
+          "confidence": 0.3173430064743824,
+          "success": false,
+          "loss_before": 0.24063088772996388,
+          "loss_after": 0.2646939765029603,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1565.0,
+          "action": "restart_service",
+          "confidence": 0.28554046217607576,
+          "success": false,
+          "loss_before": 0.2739252792035132,
+          "loss_after": 0.3013178071238645,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 1575.0,
+          "action": "restart_service",
+          "confidence": 0.2633212575535282,
+          "success": true,
+          "loss_before": 0.3040668168272861,
+          "loss_after": 0.09122004504818583,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2225.0,
+          "action": "restart_service",
+          "confidence": 0.27821136479901853,
+          "success": true,
+          "loss_before": 0.25045659604161297,
+          "loss_after": 0.07513697881248389,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2405.0,
+          "action": "restart_service",
+          "confidence": 0.284960792666909,
+          "success": true,
+          "loss_before": 0.2572591175875515,
+          "loss_after": 0.07717773527626544,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 2655.0,
+          "action": "restart_service",
+          "confidence": 0.29028224739698216,
+          "success": true,
+          "loss_before": 0.22940490617739162,
+          "loss_after": 0.06882147185321748,
+          "recovery_time": 30.0
+        },
+        {
+          "timestamp": 3015.0,
+          "action": "restart_service",
+          "confidence": 0.2976768277705204,
+          "success": false,
+          "loss_before": 0.2720884649870333,
+          "loss_after": 0.2992973114857367,
+          "recovery_time": 30.0
+        }
+      ],
+      "severity_weights": {
+        "cpu": 0.20748916423482658,
+        "latency": 0.3778286638393225,
+        "memory": 0.21178643430322855,
+        "error": 0.20289573762262236
+      },
+      "loss_weights": {
+        "alpha": 0.3019488637847043,
+        "beta": 0.26242541176180534,
+        "gamma": 0.2456743032246668,
+        "delta": 0.18995142122882352
+      }
+    }
+  },
+  "evaluation": {
+    "LRR": 0.476,
+    "RSR": 0.72,
+    "FRR": 0.0,
+    "SIS": 0.116,
+    "MTTR": 33.33,
+    "total_remediations": 50,
+    "successful_remediations": 36
+  },
+  "memory": {
+    "total_records": 50,
+    "unique_services": 5,
+    "remediations_stored": 50,
+    "successful_remediations": 36
+  },
+  "optimizer": {
+    "alpha": 0.3019488637847043,
+    "beta": 0.26242541176180534,
+    "gamma": 0.2456743032246668,
+    "delta": 0.18995142122882352
+  },
+  "incidents": [
+    {
+      "id": "INC-0001",
+      "type": "latency_spike",
+      "service": "service_0",
+      "severity": "critical",
+      "start": 1494.5180235494129,
+      "end": 1730.595857268732
+    },
+    {
+      "id": "INC-0002",
+      "type": "service_instability",
+      "service": "service_1",
+      "severity": "critical",
+      "start": 764.4166702968764,
+      "end": 1014.8367140956764
+    },
+    {
+      "id": "INC-0003",
+      "type": "latency_spike",
+      "service": "service_1",
+      "severity": "warning",
+      "start": 3289.048399009772,
+      "end": 3508.2820582241693
+    },
+    {
+      "id": "INC-0004",
+      "type": "cpu_overload",
+      "service": "service_2",
+      "severity": "critical",
+      "start": 1094.8147821967586,
+      "end": 1269.3243347836926
+    },
+    {
+      "id": "INC-0005",
+      "type": "service_instability",
+      "service": "service_3",
+      "severity": "critical",
+      "start": 775.5798627424037,
+      "end": 849.0679043276956
+    },
+    {
+      "id": "INC-0006",
+      "type": "cpu_overload",
+      "service": "service_3",
+      "severity": "critical",
+      "start": 2564.558172952735,
+      "end": 2661.162309814444
+    },
+    {
+      "id": "INC-0007",
+      "type": "memory_leak",
+      "service": "service_4",
+      "severity": "warning",
+      "start": 1107.8732094838012,
+      "end": 1226.0591234109738
+    },
+    {
+      "id": "INC-0008",
+      "type": "latency_spike",
+      "service": "service_4",
+      "severity": "warning",
+      "start": 1503.326951661877,
+      "end": 1782.7082779052073
+    }
+  ]
+}
